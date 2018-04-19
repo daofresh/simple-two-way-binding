@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simple Two Way Binding</title>
+</head>
+<body>
+        <p>
+            Name: <input type="text" z-model="name" value="voi">
+        </p>
+        <p>
+            Age: <input type="text" z-model="age">
+        </p>
+        <p>My name: <span z-value="name"></span></p>
+        <p>My age: <span z-value="age"></span></p>
+    </form>
+    <script src="bindjs.js"></script>
+    <script>
+        console.log(zData)
+        zData.age = 20
+
+        setInterval(function () {
+            zData.age++
+        }, 1000)
+    </script>
+</body>
+</html>
